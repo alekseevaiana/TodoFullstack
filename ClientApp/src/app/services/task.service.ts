@@ -7,12 +7,11 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
   providedIn: 'root'
 })
 export class TaskService {
-
+  private baseUrl = window.location.origin;
   constructor(private http: HttpClient) { }
 
   getTasks(): Observable<TodoItem[]> {
-    // find a way to put variable baseUrl
-    return this.http.get<TodoItem[]>('https://localhost:44443/api/' + 'todoitems')
+    return this.http.get<TodoItem[]>(this.baseUrl + '/api/' + 'todoitems')
   }
 }
 
