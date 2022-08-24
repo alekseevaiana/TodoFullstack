@@ -1,6 +1,6 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {TaskService} from "../services/task.service";
+import {Task} from "../../Task";
 
 @Component({
   selector: 'app-todo-list',
@@ -8,7 +8,7 @@ import {TaskService} from "../services/task.service";
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  public tasks: TodoItem[] = [];
+  tasks: Task[] = [];
   constructor(private taskService: TaskService) {
 
   }
@@ -16,11 +16,6 @@ export class TodoListComponent implements OnInit {
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((tasks) => this.tasks = tasks)
   }
-
 }
 
-interface TodoItem {
-  id: number;
-  name: string;
-  isComplete: boolean;
-}
+

@@ -1,6 +1,1 @@
-
-<h3>Your list</h3>
-
-<ul *ngFor="let item of tasks">
-  <li>{{item.name}}</li>
-</ul>
+<app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>

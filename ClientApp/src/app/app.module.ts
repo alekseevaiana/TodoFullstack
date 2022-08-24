@@ -10,6 +10,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { TodoComponent } from './todo/todo.component';
 import {TodoListComponent} from "./todo-list/todo-list.component";
+import {TaskItemComponent} from "./task-item/task-item.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {TodoListComponent} from "./todo-list/todo-list.component";
     CounterComponent,
     FetchDataComponent,
     TodoComponent,
+    TaskItemComponent,
     TodoListComponent,
   ],
   imports: [
