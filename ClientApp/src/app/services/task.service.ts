@@ -15,4 +15,16 @@ export class TaskService {
     return this.http.get<Task[]>(this.baseUrl + '/api/' + 'todoitems')
   }
 
+  // deleteTask(task: Task): Observable<Task> {
+  //   const url = this.baseUrl + `/api/todoitems/${task.id}`
+  //   console.log({url})
+  //   return this.http.delete<Task>(url)
+  // }
+
+  deleteTask(task: Task): Observable<Task> {
+    const url = this.baseUrl + `/api/todoitems/${task.id}`;
+    console.log({url})
+    return this.http.delete<Task>(url);
+  }
+
 }
