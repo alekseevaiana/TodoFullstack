@@ -11,10 +11,12 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { TodoComponent } from './todo/todo.component';
 import {TodoListComponent} from "./todo-list/todo-list.component";
 import {TaskItemComponent} from "./task-item/task-item.component";
+import {AddTaskComponent} from "./add-task/add-task.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    AddTaskComponent,
     NavMenuComponent,
     HomeComponent,
     CounterComponent,

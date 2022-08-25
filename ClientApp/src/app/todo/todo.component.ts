@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Task} from "../../Task";
 
 @Component({
   selector: 'app-todo',
@@ -12,8 +13,6 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick() {
-    console.log("my btn clicked");
-  }
+
 
 }
